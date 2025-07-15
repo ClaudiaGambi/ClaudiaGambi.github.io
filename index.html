@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Claudia Gambirasio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <title>Responsive Webpage with Top Menu</title>
   <style>
     * {
       margin: 0;
@@ -12,30 +13,33 @@
     }
 
     body {
-      display: flex;
-      font-family: Arial, sans-serif;
-      height: 100vh;
+      font-family: 'Lora', serif;
+      background-color: #27362f;
+      color: white;
+      letter-spacing: 2px
     }
 
-    /* Sidebar menu */
+    /* 🔝 Top Navigation Bar */
     nav {
-      width: 200px;
-      background-color: #333;
-      color: white;
-      padding: 20px;
+      background-color: #27362f;
+      padding: 15px 20px;
     }
 
     nav ul {
       list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
     nav ul li {
-      margin: 15px 0;
+      margin: 0 15px;
     }
 
     nav ul li a {
       color: white;
       text-decoration: none;
+      font-weight: bold;
     }
 
     nav ul li a:hover {
@@ -44,23 +48,39 @@
 
     /* Main content */
     .main-content {
-      flex-grow: 1;
-      padding: 40px;
+      padding: 40px 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: start;
+      text-align: center;
     }
 
     h1 {
-      font-size: 3em;
+      /* font-size: 2.8em; */
       margin-bottom: 20px;
+      letter-spacing: 6px;
     }
 
     p {
       font-size: 1.1em;
       max-width: 600px;
-      text-align: center;
+    }
+
+    /* 📱 Responsive tweaks */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
     }
   </style>
 </head>
@@ -68,15 +88,13 @@
 
   <nav>
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
       <li><a href="#">Services</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
   </nav>
 
   <div class="main-content">
-    <h1>Hi</h1>
+    <h1>CLAUDIA GAMBIRASIO</h1>
     <p>Welcome.</p>
   </div>
 
